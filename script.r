@@ -15,7 +15,7 @@ y = seq(y0,y1,length.out=DIMY);
 
 m2D = merge(x,y);
 
-z = matrix(data, nrow=DIMX*DIMY, byrow=T);
+z = data.frame(matrix(data, nrow=DIMX*DIMY, byrow=T));
 
 resultado = cbind(m2D,z);
 
