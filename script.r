@@ -15,8 +15,10 @@ y = seq(y0,y1,length.out=DIMY);
 
 m2D = merge(x,y);
 
-z = data.frame(matrix(data, nrow=DIMX*DIMY, byrow=T));
+z = matrix(data.matrix(data), nrow=DIMX*DIMY, ncol=1);
+
+m2D = data.matrix(m2D);
 
 resultado = cbind(m2D,z);
 
-write.csv(resultado);
+write.csv(resultado, "resultado.csv");
