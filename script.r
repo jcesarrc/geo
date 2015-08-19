@@ -15,7 +15,7 @@ y = seq(y0,y1,length.out=DIMY);
 
 m2D = merge(x,y);
 
-z = matrix(data.matrix(data), nrow=DIMX*DIMY, ncol=1);
+z = matrix(t(data.matrix(data)), nrow=DIMX*DIMY, ncol=1, byrow=T);
 
 m2D = data.matrix(m2D);
 
